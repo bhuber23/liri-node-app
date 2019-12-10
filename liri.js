@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 var keys = require("./keys.js");
-
+var axios = require("axios")
 var Spotify = require('node-spotify-api');
 //var moment = require('moment');
 var request = require('request');
@@ -11,6 +11,7 @@ var spotify = new Spotify(keys.spotify);
 
 var command = process.argv[2];
 var secondCommand = process.argv[3];
+var movieName = "";
 
 switch (command){
     case "concert-this":
@@ -24,7 +25,11 @@ switch (command){
         }
         break;
     case "movie-this":
-        movieThis();
+        if (secondCommand){
+        movieThis(secondCommand)
+        }else{
+            movieThis("Mr. Nobody")
+        };
         break;
     case "do-what-it-says":
         doWhatItSays();
@@ -50,7 +55,28 @@ function spotifyThisSong(song){
                 console.log("Preview of the song: " + preview);
                 console.log("Album Name: " + albumObject.name);
                 console.log("-------------------")
+                //Append the data to the log.txt
+                fs.appendFileSync("log.txt", "Artist: " + artistsInfo[j].name + "\nSong Name: " + trackName + "\nPreview of the song: " + preview + "\nAlbum Name: " + albumObject.name);
             }
         }
     })
+}
+
+function movieThis(movieName){
+    
+    var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
+
+    //console.log(queryUrl);
+    axios.get(queryUrl).then(
+        function(response){
+            console.log("Title of the movie: " + response.data.Title);
+            console.log("Year the movie came out: " + response.data.Year);
+            console.log("IMDB Rating: " + response.data.imdbRating);
+            //console.log("Rotten Tomatoes Rating: " + response.data.Ratings["Source: Rotten Tomatoes".value]);
+            console.log("Country where the movie was produced: " + response.data.Country);
+            console.log("Language of the movie: " + response.data.Language);
+            console.log("Movie plot: " + response.data.Plot);
+            console.log("Actors in the movie: " + response.data.Actors);
+        }
+    )
 }
