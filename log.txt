@@ -30,3 +30,32 @@ Venue Location: New York
 Date of the Event: 12/13/2019
 ----------------------------
 
+
+Title of the movie: Captain America: The First Avenger
+Year the movie came out: 2011
+IMDB Rating: 6.9
+Rotten Tomatoes Rating: 80%
+Country where the movie was produced: USA
+Language of the movie: English, Norwegian, French
+Movie plot: Steve Rogers, a rejected military soldier transforms into Captain America after taking a dose of a "Super-Soldier serum". But being Captain America comes at a price as he attempts to take down a war monger and a terrorist organization.
+Actors in the movie: Chris Evans, Hayley Atwell, Sebastian Stan, Tommy Lee Jones
+----------------------------
+
+Artist: Panic! At The Disco
+Song Name: High Hopes
+Preview of the song: https://p.scdn.co/mp3-preview/f6404b1b3199442271c17d9e1461c3f2a52018f8?cid=63478ba3c839433f96e1c86f0a44726e
+Album Name: Pray for the Wicked
+----------------------------
+
+
+Name of the venue: TD Garden
+Venue Location: Boston
+Date of the Event: 12/13/2019
+-----------------------------------------------------------
+
+Artist: Backstreet Boys
+Song Name: I Want It That Way
+Preview of the song: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=63478ba3c839433f96e1c86f0a44726e
+Album Name: The Hits--Chapter One
+-----------------------------------------------------------
+

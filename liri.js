@@ -6,7 +6,7 @@ var Spotify = require('node-spotify-api');
 var moment = require('moment');
 var request = require('request');
 var fs = require('fs');
-var divider = "\n----------------------------\n\n";
+var divider = "\n-----------------------------------------------------------\n\n";
 
 var spotify = new Spotify(keys.spotify);
 
@@ -107,4 +107,16 @@ function movieThis(movieName) {
         .catch(function (error) {
             console.log(error);
         })
+}
+
+function doWhatItSays() {
+    fs.readFile("random.txt", "utf8", function(error, data){
+        if (error){
+            return console.log(error);
+        }
+        var contentArray = data.split(",");
+        var content = contentArray[1];
+        spotifyThisSong(content);
+
+    })
 }
