@@ -1,4 +1,32 @@
 Artist: Spice Girls
 Song Name: Wannabe
 Preview of the song: null
-Album Name: Spice
+Album Name: SpiceArtist: Various Artists
+Song Name: Circle of Life - From "The Lion King"/ Soundtrack
+Preview of the song: null
+Album Name: The Lion King
+Name of the venue: Transit Bar
+Venue Location: Canberra City
+Date of the Event: 12/21/2019
+Title of the movie: Thor
+Year the movie came out: 2011
+IMDB Rating: 7.0
+Rotten Tomatoes Rating: 78%
+Country where the movie was produced: USA
+Language of the movie: English
+Movie plot: The powerful but arrogant god Thor is cast out of Asgard to live amongst humans in Midgard (Earth), where he soon becomes one of their finest defenders.
+Actors in the movie: Chris Hemsworth, Natalie Portman, Tom Hiddleston, Anthony Hopkins
+----------------------------
+
+Artist: Panic! At The Disco
+Song Name: High Hopes
+Preview of the song: https://p.scdn.co/mp3-preview/f6404b1b3199442271c17d9e1461c3f2a52018f8?cid=63478ba3c839433f96e1c86f0a44726e
+Album Name: Pray for the Wicked
+----------------------------
+
+
+Name of the venue: Z100's Jingle Ball Presented by Capital One
+Venue Location: New York
+Date of the Event: 12/13/2019
+----------------------------
+
