@@ -16,21 +16,13 @@ var secondCommand = process.argv.slice(3);
 
 switch (command) {
     case "concert-this":
-        concertThis();
+        concertThis(secondCommand);
         break;
     case "spotify-this-song":
-        if (secondCommand) {
-            spotifyThisSong(secondCommand);
-        } else {
-            spotifyThisSong("I Want It That Way");
-        }
+        spotifyThisSong(secondCommand);
         break;
     case "movie-this":
-        if (secondCommand) {
-            movieThis(secondCommand)
-        } else {
-            movieThis("Mr. Nobody")
-        };
+        movieThis(secondCommand)
         break;
     case "do-what-it-says":
         doWhatItSays();
@@ -57,6 +49,7 @@ function concertThis(artist) {
 }
 
 function spotifyThisSong(song) {
+
     spotify.search({ type: 'track', query: song, limit: 1 }, function (err, data) {
         if (err) {
             return console.log('Error occurred: ' + err);
@@ -84,10 +77,13 @@ function spotifyThisSong(song) {
 
 function movieThis(movieName) {
 
-    var MovieName = secondCommand.join("+");
+    var movieName = secondCommand.join("+");
+    if (!movieName) {
+        movieName = "Mr. Nobody";
+    }
     var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
 
-    //console.log(queryUrl);
+
     axios.get(queryUrl).then(
         function (response) {
             console.log("Title of the movie: " + response.data.Title);
@@ -110,8 +106,8 @@ function movieThis(movieName) {
 }
 
 function doWhatItSays() {
-    fs.readFile("random.txt", "utf8", function(error, data){
-        if (error){
+    fs.readFile("random.txt", "utf8", function (error, data) {
+        if (error) {
             return console.log(error);
         }
         var contentArray = data.split(",");
